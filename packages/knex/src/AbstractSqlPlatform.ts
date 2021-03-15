@@ -11,6 +11,10 @@ export abstract class AbstractSqlPlatform extends Platform {
     return true;
   }
 
+  indexForeignKeys() {
+    return true;
+  }
+
   getRepositoryClass<T>(): Constructor<EntityRepository<T>> {
     return SqlEntityRepository as Constructor<EntityRepository<T>>;
   }
